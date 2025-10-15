@@ -10,3 +10,35 @@
 2025-10-15 05:32:30,201 - SoporteApp - INFO - Consultados 1 soportes
 2025-10-15 05:32:31,042 - SoporteApp - INFO - Consultados 1 soportes
 2025-10-15 13:36:57,000 - SoporteApp - INFO - Iniciando aplicación de Soporte
+2025-10-15 14:50:52,806 - SoporteApp - INFO - Iniciando aplicación de Soporte
+2025-10-15 14:51:00,815 - SoporteApp - ERROR - Error al inicializar base de datos: (psycopg2.OperationalError) could not translate host name "db" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-15 14:51:00,816 - SoporteApp - INFO - Base de datos inicializada
+2025-10-15 14:51:08,501 - SoporteApp - INFO - Iniciando aplicación de Soporte
+2025-10-15 14:51:16,505 - SoporteApp - ERROR - Error al inicializar base de datos: (psycopg2.OperationalError) could not translate host name "db" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-15 14:51:16,505 - SoporteApp - INFO - Base de datos inicializada
+2025-10-15 14:52:48,997 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-15 14:52:57,003 - SoporteApp - ERROR - Error al inicializar base de datos: (psycopg2.OperationalError) could not translate host name "db" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-15 14:52:57,004 - SoporteApp - ERROR - Error al inicializar la base de datos
+2025-10-15 15:15:00 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251015.log
+2025-10-15 15:15:00 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-15 15:15:01 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-15 15:15:01 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-15 15:15:31 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:15:31 - SoporteApp - INFO - Consultados 0 soportes (skip=0, limit=100)
+2025-10-15 15:15:31 - SoporteApp - INFO - Se retornan 0 soportes
+2025-10-15 15:15:31 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:15:33 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:15:33 - SoporteApp - INFO - Consultados 0 soportes (skip=0, limit=100)
+2025-10-15 15:15:33 - SoporteApp - INFO - Se retornan 0 soportes
+2025-10-15 15:15:33 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:15:42 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:15:42 - SoporteApp - INFO - Consultados 0 soportes (skip=0, limit=100)
+2025-10-15 15:15:42 - SoporteApp - INFO - Se retornan 0 soportes
+2025-10-15 15:15:42 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:15:47 - SoporteApp - INFO - Acceso a endpoint raíz /

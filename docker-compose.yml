@@ -1,32 +1,32 @@
 version: '3.8'
 
 services:
+  # Servicio de base de datos MySQL
   db:
-    image: postgres:15-alpine
+    image: mysql:8.0
     container_name: soporte_db
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-admin}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin123}
-      POSTGRES_DB: ${POSTGRES_DB:-soporte_db}
+    env_file:
+      - .env  # Carga variables desde .env
     ports:
-      - "5432:5432"
+      - "3306:3306"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - mysql_data:/var/lib/mysql
     networks:
       - soporte_network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-admin}"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
+  # Servicio Backend FastAPI
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: soporte_backend
-    environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-admin}:${POSTGRES_PASSWORD:-admin123}@db:5432/${POSTGRES_DB:-soporte_db}
+    env_file:
+      - .env  # Carga variables desde .env
     ports:
       - "8000:8000"
     depends_on:
@@ -38,6 +38,7 @@ services:
       - ./backend/app:/app
     restart: unless-stopped
 
+  # Servicio Frontend
   frontend:
     build:
       context: ./frontend
@@ -56,4 +57,4 @@ networks:
     driver: bridge
 
 volumes:
-  postgres_data:
+  mysql_data:
