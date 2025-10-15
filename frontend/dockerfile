@@ -1,0 +1,12 @@
+FROM nginx:alpine
+
+# Copiar archivos estáticos
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
+
+# Exponer puerto 80
+EXPOSE 80
+
+# Nginx se ejecuta por defecto
+CMD ["nginx", "-g", "daemon off;"]
