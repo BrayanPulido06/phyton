@@ -1,8 +1,3 @@
-"""
-Módulo CRUD (Create, Read, Update, Delete).
-Contiene todas las operaciones de base de datos para la entidad Soporte.
-"""
-
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from db import Soporte
@@ -13,30 +8,14 @@ from logs import log_info, log_error, log_warning
 
 
 class SoporteCreate(BaseModel):
-    """
-    Modelo de validación para crear un soporte.
-    
-    Attributes:
-        nombre (str): Nombre completo (mínimo 3 caracteres)
-        direccion (str): Dirección completa (mínimo 5 caracteres)
-        cedula (str): Número de cédula (mínimo 5 caracteres)
-    """
+
     nombre: str = Field(..., min_length=3, description="Nombre completo")
     direccion: str = Field(..., min_length=5, description="Dirección completa")
     cedula: str = Field(..., min_length=5, description="Número de cédula")
 
 
 class SoporteResponse(BaseModel):
-    """
-    Modelo de respuesta para un soporte.
-    
-    Attributes:
-        id (int): Identificador único
-        nombre (str): Nombre completo
-        direccion (str): Dirección
-        cedula (str): Cédula
-        fecha_creacion (datetime): Fecha de creación
-    """
+
     id: int
     nombre: str
     direccion: str
@@ -48,20 +27,7 @@ class SoporteResponse(BaseModel):
 
 
 def crear_soporte(db: Session, soporte: SoporteCreate) -> Optional[Soporte]:
-    """
-    Crea un nuevo registro de soporte en la base de datos.
-    
-    Args:
-        db (Session): Sesión de base de datos SQLAlchemy
-        soporte (SoporteCreate): Datos del soporte a crear
-        
-    Returns:
-        Optional[Soporte]: Objeto Soporte creado o None si hubo error
-        
-    Raises:
-        IntegrityError: Si la cédula ya existe en la base de datos
-        SQLAlchemyError: Si hay error en la operación de base de datos
-    """
+
     db_soporte = None
     try:
         # Crear instancia del modelo
@@ -98,20 +64,7 @@ def crear_soporte(db: Session, soporte: SoporteCreate) -> Optional[Soporte]:
 
 
 def obtener_soportes(db: Session, skip: int = 0, limit: int = 100) -> List[Soporte]:
-    """
-    Obtiene una lista paginada de todos los soportes.
-    
-    Args:
-        db (Session): Sesión de base de datos SQLAlchemy
-        skip (int): Número de registros a saltar (para paginación)
-        limit (int): Número máximo de registros a devolver
-        
-    Returns:
-        List[Soporte]: Lista de objetos Soporte
-        
-    Raises:
-        SQLAlchemyError: Si hay error en la consulta
-    """
+
     try:
         # Consultar todos los soportes con paginación
         soportes = db.query(Soporte)\
@@ -132,19 +85,7 @@ def obtener_soportes(db: Session, skip: int = 0, limit: int = 100) -> List[Sopor
 
 
 def obtener_soporte_por_id(db: Session, soporte_id: int) -> Optional[Soporte]:
-    """
-    Obtiene un soporte específico por su ID.
-    
-    Args:
-        db (Session): Sesión de base de datos SQLAlchemy
-        soporte_id (int): ID del soporte a buscar
-        
-    Returns:
-        Optional[Soporte]: Objeto Soporte encontrado o None si no existe
-        
-    Raises:
-        SQLAlchemyError: Si hay error en la consulta
-    """
+
     try:
         # Buscar soporte por ID
         soporte = db.query(Soporte).filter(Soporte.id == soporte_id).first()
@@ -165,19 +106,7 @@ def obtener_soporte_por_id(db: Session, soporte_id: int) -> Optional[Soporte]:
 
 
 def obtener_soporte_por_cedula(db: Session, cedula: str) -> Optional[Soporte]:
-    """
-    Obtiene un soporte por número de cédula.
-    
-    Args:
-        db (Session): Sesión de base de datos SQLAlchemy
-        cedula (str): Número de cédula a buscar
-        
-    Returns:
-        Optional[Soporte]: Objeto Soporte encontrado o None si no existe
-        
-    Raises:
-        SQLAlchemyError: Si hay error en la consulta
-    """
+
     try:
         # Buscar soporte por cédula
         soporte = db.query(Soporte).filter(Soporte.cedula == cedula).first()
@@ -198,19 +127,7 @@ def obtener_soporte_por_cedula(db: Session, cedula: str) -> Optional[Soporte]:
 
 
 def eliminar_soporte(db: Session, soporte_id: int) -> bool:
-    """
-    Elimina un soporte de la base de datos.
-    
-    Args:
-        db (Session): Sesión de base de datos SQLAlchemy
-        soporte_id (int): ID del soporte a eliminar
-        
-    Returns:
-        bool: True si se eliminó correctamente, False si no existía
-        
-    Raises:
-        SQLAlchemyError: Si hay error en la operación de eliminación
-    """
+
     try:
         # Buscar soporte
         soporte = db.query(Soporte).filter(Soporte.id == soporte_id).first()

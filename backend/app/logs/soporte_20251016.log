@@ -1,0 +1,364 @@
+2025-10-16 13:05:46 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 13:05:46 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 13:05:54 - SoporteApp - ERROR - Error al inicializar base de datos: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:05:54 - SoporteApp - ERROR - Error al inicializar la base de datos
+2025-10-16 13:32:41 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 13:32:42 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 13:32:50 - SoporteApp - ERROR - Error al inicializar base de datos: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:32:50 - SoporteApp - ERROR - Error al inicializar la base de datos
+2025-10-16 13:45:43 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 13:45:46 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:45:49 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:45:54 - SoporteApp - ERROR - Error al obtener lista de soportes: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:45:54 - SoporteApp - ERROR - Error de base de datos al listar soportes: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:45:54 - SoporteApp - ERROR - Error en sesión de base de datos: 
+2025-10-16 13:45:54 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:45:57 - SoporteApp - ERROR - Error al obtener lista de soportes: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:45:57 - SoporteApp - ERROR - Error de base de datos al listar soportes: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-16 13:45:57 - SoporteApp - ERROR - Error en sesión de base de datos: 
+2025-10-16 13:45:57 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:47:08 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 13:53:56 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 13:53:57 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 13:53:57 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 13:53:57 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 13:54:11 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:54:11 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 13:54:11 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 13:54:11 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:54:13 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:54:13 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 13:54:13 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 13:54:13 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:54:15 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:54:15 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 13:54:15 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 13:54:15 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:55:49 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 13:55:50 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 13:55:50 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 13:55:50 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 13:59:49 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 13:59:49 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 13:59:49 - SoporteApp - INFO - Archivo Excel leído: 10 filas encontradas
+2025-10-16 13:59:49 - SoporteApp - INFO - Excel procesado exitosamente: 10 registros válidos
+2025-10-16 13:59:49 - SoporteApp - INFO - Excel procesado: 10 registros
+2025-10-16 13:59:49 - SoporteApp - INFO - Iniciando inserción masiva de 10 registros
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 2): 1. 1054789632
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 3): 2. 9876543210
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 4): 3. 4561237890
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 5): 4. 3216549870
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 6): 5. 7894561230
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 7): 6. 6549873210
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 8): 7. 2581473690
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 9): 8. 1472583690
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 10): 9. 3692581470
+2025-10-16 13:59:49 - SoporteApp - INFO - Registro insertado (fila 11): 10. 8527419630
+2025-10-16 13:59:49 - SoporteApp - INFO - Inserción masiva completada: 10 exitosos, 0 fallidos
+2025-10-16 13:59:49 - SoporteApp - INFO - Carga completada: 10 exitosos, 0 fallidos
+2025-10-16 13:59:49 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 13:59:54 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 13:59:54 - SoporteApp - INFO - Consultados 12 soportes (skip=0, limit=100)
+2025-10-16 13:59:54 - SoporteApp - INFO - Se retornan 12 soportes
+2025-10-16 13:59:54 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-16 14:03:52 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:03:52 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:03:52 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:04:43 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:04:44 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:04:44 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:04:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:04:47 - SoporteApp - INFO - Consultados 12 soportes (skip=0, limit=100)
+2025-10-16 14:04:47 - SoporteApp - INFO - Se retornan 12 soportes
+2025-10-16 14:04:55 - SoporteApp - INFO - Intentando eliminar soporte - ID: 1
+2025-10-16 14:04:55 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 1
+2025-10-16 14:04:55 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 1
+2025-10-16 14:04:55 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:04:55 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:04:55 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:04:58 - SoporteApp - INFO - Intentando eliminar soporte - ID: 3
+2025-10-16 14:04:58 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 3
+2025-10-16 14:04:58 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 3
+2025-10-16 14:04:58 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:04:58 - SoporteApp - INFO - Consultados 10 soportes (skip=0, limit=100)
+2025-10-16 14:04:58 - SoporteApp - INFO - Se retornan 10 soportes
+2025-10-16 14:05:00 - SoporteApp - INFO - Intentando eliminar soporte - ID: 4
+2025-10-16 14:05:00 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 4
+2025-10-16 14:05:00 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 4
+2025-10-16 14:05:00 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:00 - SoporteApp - INFO - Consultados 9 soportes (skip=0, limit=100)
+2025-10-16 14:05:00 - SoporteApp - INFO - Se retornan 9 soportes
+2025-10-16 14:05:01 - SoporteApp - INFO - Intentando eliminar soporte - ID: 5
+2025-10-16 14:05:01 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 5
+2025-10-16 14:05:01 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 5
+2025-10-16 14:05:01 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:01 - SoporteApp - INFO - Consultados 8 soportes (skip=0, limit=100)
+2025-10-16 14:05:01 - SoporteApp - INFO - Se retornan 8 soportes
+2025-10-16 14:05:03 - SoporteApp - INFO - Intentando eliminar soporte - ID: 6
+2025-10-16 14:05:03 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 6
+2025-10-16 14:05:03 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 6
+2025-10-16 14:05:03 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:03 - SoporteApp - INFO - Consultados 7 soportes (skip=0, limit=100)
+2025-10-16 14:05:03 - SoporteApp - INFO - Se retornan 7 soportes
+2025-10-16 14:05:05 - SoporteApp - INFO - Intentando eliminar soporte - ID: 7
+2025-10-16 14:05:05 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 7
+2025-10-16 14:05:05 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 7
+2025-10-16 14:05:05 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:05 - SoporteApp - INFO - Consultados 6 soportes (skip=0, limit=100)
+2025-10-16 14:05:05 - SoporteApp - INFO - Se retornan 6 soportes
+2025-10-16 14:05:07 - SoporteApp - INFO - Intentando eliminar soporte - ID: 8
+2025-10-16 14:05:07 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 8
+2025-10-16 14:05:07 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 8
+2025-10-16 14:05:07 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:07 - SoporteApp - INFO - Consultados 5 soportes (skip=0, limit=100)
+2025-10-16 14:05:07 - SoporteApp - INFO - Se retornan 5 soportes
+2025-10-16 14:05:08 - SoporteApp - INFO - Intentando eliminar soporte - ID: 9
+2025-10-16 14:05:08 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 9
+2025-10-16 14:05:08 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 9
+2025-10-16 14:05:08 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:08 - SoporteApp - INFO - Consultados 4 soportes (skip=0, limit=100)
+2025-10-16 14:05:08 - SoporteApp - INFO - Se retornan 4 soportes
+2025-10-16 14:05:09 - SoporteApp - INFO - Intentando eliminar soporte - ID: 10
+2025-10-16 14:05:09 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 10
+2025-10-16 14:05:09 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 10
+2025-10-16 14:05:09 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:09 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 14:05:09 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 14:05:10 - SoporteApp - INFO - Intentando eliminar soporte - ID: 11
+2025-10-16 14:05:10 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 11
+2025-10-16 14:05:10 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 11
+2025-10-16 14:05:10 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:10 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 14:05:10 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 14:05:11 - SoporteApp - INFO - Intentando eliminar soporte - ID: 12
+2025-10-16 14:05:11 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 12
+2025-10-16 14:05:11 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 12
+2025-10-16 14:05:11 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:11 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-16 14:05:11 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-16 14:05:11 - SoporteApp - INFO - Intentando eliminar soporte - ID: 2
+2025-10-16 14:05:11 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 2
+2025-10-16 14:05:11 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 2
+2025-10-16 14:05:11 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:11 - SoporteApp - INFO - Consultados 0 soportes (skip=0, limit=100)
+2025-10-16 14:05:11 - SoporteApp - INFO - Se retornan 0 soportes
+2025-10-16 14:05:29 - SoporteApp - INFO - Intento de crear soporte - Cédula: 1231231231231
+2025-10-16 14:05:29 - SoporteApp - INFO - No existe soporte con cédula: 1231231231231
+2025-10-16 14:05:29 - SoporteApp - INFO - Soporte creado exitosamente - Cédula: 1231231231231, Nombre: brayan
+2025-10-16 14:05:29 - SoporteApp - INFO - Soporte creado exitosamente - ID: 13
+2025-10-16 14:05:29 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:29 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-16 14:05:29 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-16 14:05:37 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 14:05:37 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 14:05:38 - SoporteApp - INFO - Archivo Excel leído: 10 filas encontradas
+2025-10-16 14:05:38 - SoporteApp - INFO - Excel procesado exitosamente: 10 registros válidos
+2025-10-16 14:05:38 - SoporteApp - INFO - Excel procesado: 10 registros
+2025-10-16 14:05:38 - SoporteApp - INFO - Iniciando inserción masiva de 10 registros
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 2): 1. 1054789632
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 3): 2. 9876543210
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 4): 3. 4561237890
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 5): 4. 3216549870
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 6): 5. 7894561230
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 7): 6. 6549873210
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 8): 7. 2581473690
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 9): 8. 1472583690
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 10): 9. 3692581470
+2025-10-16 14:05:38 - SoporteApp - INFO - Registro insertado (fila 11): 10. 8527419630
+2025-10-16 14:05:38 - SoporteApp - INFO - Inserción masiva completada: 10 exitosos, 0 fallidos
+2025-10-16 14:05:38 - SoporteApp - INFO - Carga completada: 10 exitosos, 0 fallidos
+2025-10-16 14:05:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:05:47 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:05:47 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:22:45 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:22:45 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:22:45 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:22:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:22:47 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:22:47 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:22:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:22:47 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:22:47 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:22:48 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:22:48 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:22:48 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:23:41 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:23:41 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:23:41 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:23:43 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:23:43 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:23:43 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:23:46 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:23:46 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:23:46 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:23:51 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:23:51 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:23:51 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:07 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:07 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:07 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:11 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:12 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:12 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:16 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:16 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:16 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:19 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:20 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:20 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:34 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:35 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:35 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:45 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:46 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:46 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:49 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:49 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:49 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:54 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:54 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:54 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:24:57 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:24:58 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:24:58 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:03 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:04 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:04 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:04 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:11 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:11 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:11 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:24 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:25 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:25 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:29 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:29 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:29 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:33 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:33 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:33 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:37 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:38 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:38 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:52 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:52 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:52 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:25:58 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:25:58 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:25:58 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:06 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:06 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:06 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:12 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:12 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:12 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:15 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:16 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:16 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:18 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:19 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:19 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:21 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:21 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:21 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:23 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:23 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:24 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:26 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:27 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:28 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:28 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:29 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:29 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:29 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:48 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:48 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:48 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:26:53 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:26:53 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:26:53 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:04 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:05 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:05 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:05 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:10 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:10 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:10 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:16 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:16 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:16 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:22 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:23 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:23 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:27 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:27 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:27 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:33 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:33 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:33 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:46 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:47 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:47 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:27:57 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 14:27:57 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 14:27:57 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 14:29:26 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 14:29:26 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 14:29:27 - SoporteApp - INFO - Archivo Excel leído: 10 filas encontradas
+2025-10-16 14:29:27 - SoporteApp - INFO - Excel procesado exitosamente: 10 registros válidos
+2025-10-16 14:29:27 - SoporteApp - INFO - Excel procesado: 10 registros
+2025-10-16 14:29:27 - SoporteApp - INFO - Iniciando inserción masiva de 10 registros
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 2): 1. 1054789632
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 3): 2. 9876543210
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 4): 3. 4561237890
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 5): 4. 3216549870
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 6): 5. 7894561230
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 7): 6. 6549873210
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 8): 7. 2581473690
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 9): 8. 1472583690
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 10): 9. 3692581470
+2025-10-16 14:29:27 - SoporteApp - WARNING - Cédula duplicada (fila 11): 10. 8527419630
+2025-10-16 14:29:27 - SoporteApp - WARNING - No se insertó ningún registro
+2025-10-16 14:29:27 - SoporteApp - INFO - Carga completada: 0 exitosos, 10 fallidos
+2025-10-16 14:39:44 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:39:44 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:39:44 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:51 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:51 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:51 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:52 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:52 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:52 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:53 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:54 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:54 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:54 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:54 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:54 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:54 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:55 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:55 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:55 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:56 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:56 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:56 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:58 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:58 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:58 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 14:44:59 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 14:44:59 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 14:44:59 - SoporteApp - INFO - Se retornan 11 soportes

@@ -42,3 +42,29 @@
 2025-10-15 15:15:42 - SoporteApp - INFO - Se retornan 0 soportes
 2025-10-15 15:15:42 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
 2025-10-15 15:15:47 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-15 15:19:41 - SoporteApp - INFO - Intento de crear soporte - Cédula: 123456789
+2025-10-15 15:19:41 - SoporteApp - INFO - No existe soporte con cédula: 123456789
+2025-10-15 15:19:41 - SoporteApp - INFO - Soporte creado exitosamente - Cédula: 123456789, Nombre: wool
+2025-10-15 15:19:41 - SoporteApp - INFO - Soporte creado exitosamente - ID: 1
+2025-10-15 15:19:41 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:19:41 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:19:41 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-15 15:19:41 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-15 15:19:41 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:19:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:19:47 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-15 15:19:47 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-15 15:19:47 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:20:18 - SoporteApp - INFO - Intento de crear soporte - Cédula: 1231231231231
+2025-10-15 15:20:18 - SoporteApp - INFO - No existe soporte con cédula: 1231231231231
+2025-10-15 15:20:18 - SoporteApp - INFO - Soporte creado exitosamente - Cédula: 1231231231231, Nombre: brayan
+2025-10-15 15:20:18 - SoporteApp - INFO - Soporte creado exitosamente - ID: 2
+2025-10-15 15:20:18 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:20:18 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-15 15:20:18 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-15 15:20:18 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-15 15:20:18 - SoporteApp - INFO - Conexión a base de datos cerrada correctamente
+2025-10-15 15:50:59 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251015.log
+2025-10-15 15:50:59 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-15 15:50:59 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-15 15:50:59 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente

@@ -1,17 +1,14 @@
-"""
-API REST para Sistema de Soporte de Mensajería.
-Backend desarrollado con FastAPI para gestionar solicitudes de soporte.
-
-Endpoints disponibles:
+"""Endpoints disponibles:
     - GET / : Mensaje de bienvenida
     - POST /api/soportes/ : Crear nuevo soporte
     - GET /api/soportes/ : Listar todos los soportes
     - GET /api/soportes/{id} : Obtener soporte por ID
     - DELETE /api/soportes/{id} : Eliminar soporte
+    - POST /api/soportes/upload-excel/ : Cargar datos desde Excel
     - GET /health : Verificar estado de la API
 """
 
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, HTTPException, status, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
@@ -19,6 +16,7 @@ from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from typing import List
 import db
 import crud
+import excel_crud
 from logs import log_info, log_error, log_warning
 
 # Crear instancia de FastAPI
@@ -40,13 +38,6 @@ app.add_middleware(
 
 @app.on_event("startup")
 def startup_event():
-    """
-    Evento que se ejecuta al iniciar la aplicación.
-    Inicializa la base de datos y crea las tablas necesarias.
-    
-    Returns:
-        None
-    """
     try:
         log_info("=== Iniciando aplicación de Soporte ===")
         
@@ -69,12 +60,6 @@ def startup_event():
     description="Retorna mensaje de bienvenida y estado de la API"
 )
 def read_root():
-    """
-    Endpoint raíz de la API.
-    
-    Returns:
-        dict: Mensaje de bienvenida y estado de la API
-    """
     try:
         log_info("Acceso a endpoint raíz /")
         return {
@@ -98,20 +83,7 @@ def read_root():
     description="Crea un nuevo registro de soporte en la base de datos"
 )
 def crear_soporte(soporte: crud.SoporteCreate, db_session: Session = Depends(db.get_db)):
-    """
-    Crea un nuevo soporte en el sistema.
-    
-    Args:
-        soporte (SoporteCreate): Datos del soporte (nombre, cédula, dirección)
-        db_session (Session): Sesión de base de datos (inyectada automáticamente)
-        
-    Returns:
-        SoporteResponse: Datos del soporte creado incluyendo ID y fecha
-        
-    Raises:
-        HTTPException 400: Si la cédula ya existe
-        HTTPException 500: Si hay error en el servidor
-    """
+
     try:
         log_info(f"Intento de crear soporte - Cédula: {soporte.cedula}")
         
@@ -164,20 +136,7 @@ def listar_soportes(
     limit: int = 100,
     db_session: Session = Depends(db.get_db)
 ):
-    """
-    Lista todos los soportes registrados con paginación.
-    
-    Args:
-        skip (int): Número de registros a saltar (por defecto 0)
-        limit (int): Número máximo de registros a retornar (por defecto 100)
-        db_session (Session): Sesión de base de datos (inyectada automáticamente)
-        
-    Returns:
-        List[SoporteResponse]: Lista de soportes
-        
-    Raises:
-        HTTPException 500: Si hay error en el servidor
-    """
+
     try:
         log_info(f"Consultando lista de soportes (skip={skip}, limit={limit})")
         
@@ -207,20 +166,7 @@ def listar_soportes(
     description="Obtiene los datos de un soporte específico por su ID"
 )
 def obtener_soporte(soporte_id: int, db_session: Session = Depends(db.get_db)):
-    """
-    Obtiene un soporte específico por su ID.
-    
-    Args:
-        soporte_id (int): ID del soporte a buscar
-        db_session (Session): Sesión de base de datos (inyectada automáticamente)
-        
-    Returns:
-        SoporteResponse: Datos del soporte encontrado
-        
-    Raises:
-        HTTPException 404: Si el soporte no existe
-        HTTPException 500: Si hay error en el servidor
-    """
+
     try:
         log_info(f"Buscando soporte con ID: {soporte_id}")
         
@@ -258,20 +204,7 @@ def obtener_soporte(soporte_id: int, db_session: Session = Depends(db.get_db)):
     description="Elimina un soporte específico de la base de datos"
 )
 def eliminar_soporte(soporte_id: int, db_session: Session = Depends(db.get_db)):
-    """
-    Elimina un soporte del sistema.
-    
-    Args:
-        soporte_id (int): ID del soporte a eliminar
-        db_session (Session): Sesión de base de datos (inyectada automáticamente)
-        
-    Returns:
-        dict: Mensaje de confirmación de eliminación
-        
-    Raises:
-        HTTPException 404: Si el soporte no existe
-        HTTPException 500: Si hay error en el servidor
-    """
+
     try:
         log_info(f"Intentando eliminar soporte - ID: {soporte_id}")
         
@@ -306,18 +239,81 @@ def eliminar_soporte(soporte_id: int, db_session: Session = Depends(db.get_db)):
         )
 
 
+@app.post(
+    "/api/soportes/upload-excel/",
+    summary="Cargar datos desde Excel",
+    description="Carga masiva de soportes desde un archivo Excel (máximo 100 registros)"
+)
+async def upload_excel(
+    file: UploadFile = File(...),
+    limite: int = 100,
+    db_session: Session = Depends(db.get_db)
+):
+    """
+    Returns:
+        dict: Resumen de la carga (exitosos, fallidos, errores)
+        
+    Raises:
+        HTTPException 400: Si el archivo no es válido
+        HTTPException 500: Si hay error en el servidor
+    """
+    try:
+        log_info(f"Iniciando carga de archivo Excel: {file.filename}")
+        
+        # Validar tipo de archivo
+        if not file.filename.endswith(('.xlsx', '.xls')):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="El archivo debe ser de tipo Excel (.xlsx o .xls)"
+            )
+        
+        # Validar límite
+        if limite < 0 or limite > 100:
+            limite = 100
+        
+        # Leer contenido del archivo
+        contenido = await file.read()
+        
+        # Procesar Excel
+        df, estadisticas = excel_crud.procesar_excel(contenido, limite)
+        
+        log_info(f"Excel procesado: {estadisticas['filas_procesadas']} registros")
+        
+        # Insertar datos en la base de datos
+        resultado = excel_crud.insertar_datos_masivos(db_session, df)
+        
+        log_info(f"Carga completada: {resultado['exitosos']} exitosos, {resultado['fallidos']} fallidos")
+        
+        return {
+            "message": "Proceso de carga completado",
+            "archivo": file.filename,
+            "estadisticas": estadisticas,
+            "resultado": resultado
+        }
+        
+    except ValueError as e:
+        log_error(f"Error de validación en archivo Excel: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        log_error(f"Error inesperado al procesar Excel: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error al procesar archivo: {str(e)}"
+        )
+
+
 @app.get(
     "/health",
     summary="Health check",
     description="Verifica el estado de salud de la API"
 )
 def health_check():
-    """
-    Endpoint para verificar el estado de la API.
-    
-    Returns:
-        dict: Estado de salud de la API
-    """
+
     try:
         log_info("Health check ejecutado")
         return {
