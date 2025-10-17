@@ -362,3 +362,202 @@
 2025-10-16 14:44:59 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
 2025-10-16 14:44:59 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
 2025-10-16 14:44:59 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 15:01:30 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 15:01:30 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 15:01:30 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 15:48:39 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 15:48:40 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 15:48:40 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 15:49:12 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 15:49:12 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 15:49:12 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 15:49:12 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 15:49:12 - SoporteApp - INFO - Consultados 11 soportes (skip=0, limit=100)
+2025-10-16 15:49:12 - SoporteApp - INFO - Se retornan 11 soportes
+2025-10-16 15:49:52 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 16:09:12 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 16:09:13 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 16:09:13 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 16:14:32 - SoporteApp - INFO - Intentando eliminar soporte - ID: 23
+2025-10-16 16:14:32 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 23
+2025-10-16 16:14:32 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 23
+2025-10-16 16:14:32 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:32 - SoporteApp - INFO - Consultados 10 soportes (skip=0, limit=100)
+2025-10-16 16:14:32 - SoporteApp - INFO - Se retornan 10 soportes
+2025-10-16 16:14:34 - SoporteApp - INFO - Intentando eliminar soporte - ID: 14
+2025-10-16 16:14:34 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 14
+2025-10-16 16:14:34 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 14
+2025-10-16 16:14:34 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:34 - SoporteApp - INFO - Consultados 9 soportes (skip=0, limit=100)
+2025-10-16 16:14:34 - SoporteApp - INFO - Se retornan 9 soportes
+2025-10-16 16:14:36 - SoporteApp - INFO - Intentando eliminar soporte - ID: 15
+2025-10-16 16:14:36 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 15
+2025-10-16 16:14:36 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 15
+2025-10-16 16:14:36 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:36 - SoporteApp - INFO - Consultados 8 soportes (skip=0, limit=100)
+2025-10-16 16:14:36 - SoporteApp - INFO - Se retornan 8 soportes
+2025-10-16 16:14:38 - SoporteApp - INFO - Intentando eliminar soporte - ID: 16
+2025-10-16 16:14:38 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 16
+2025-10-16 16:14:38 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 16
+2025-10-16 16:14:38 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:38 - SoporteApp - INFO - Consultados 7 soportes (skip=0, limit=100)
+2025-10-16 16:14:38 - SoporteApp - INFO - Se retornan 7 soportes
+2025-10-16 16:14:39 - SoporteApp - INFO - Intentando eliminar soporte - ID: 17
+2025-10-16 16:14:39 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 17
+2025-10-16 16:14:39 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 17
+2025-10-16 16:14:39 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:39 - SoporteApp - INFO - Consultados 6 soportes (skip=0, limit=100)
+2025-10-16 16:14:39 - SoporteApp - INFO - Se retornan 6 soportes
+2025-10-16 16:14:41 - SoporteApp - INFO - Intentando eliminar soporte - ID: 18
+2025-10-16 16:14:41 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 18
+2025-10-16 16:14:41 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 18
+2025-10-16 16:14:41 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:41 - SoporteApp - INFO - Consultados 5 soportes (skip=0, limit=100)
+2025-10-16 16:14:41 - SoporteApp - INFO - Se retornan 5 soportes
+2025-10-16 16:14:43 - SoporteApp - INFO - Intentando eliminar soporte - ID: 19
+2025-10-16 16:14:43 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 19
+2025-10-16 16:14:43 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 19
+2025-10-16 16:14:43 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:43 - SoporteApp - INFO - Consultados 4 soportes (skip=0, limit=100)
+2025-10-16 16:14:43 - SoporteApp - INFO - Se retornan 4 soportes
+2025-10-16 16:14:45 - SoporteApp - INFO - Intentando eliminar soporte - ID: 20
+2025-10-16 16:14:45 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 20
+2025-10-16 16:14:45 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 20
+2025-10-16 16:14:45 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:45 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 16:14:45 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 16:14:47 - SoporteApp - INFO - Intentando eliminar soporte - ID: 21
+2025-10-16 16:14:47 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 21
+2025-10-16 16:14:47 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 21
+2025-10-16 16:14:47 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:47 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 16:14:47 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 16:14:49 - SoporteApp - INFO - Intentando eliminar soporte - ID: 22
+2025-10-16 16:14:49 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 22
+2025-10-16 16:14:49 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 22
+2025-10-16 16:14:49 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:14:49 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-16 16:14:49 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-16 16:15:39 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:15:39 - SoporteApp - INFO - Consultados 1 soportes (skip=0, limit=100)
+2025-10-16 16:15:39 - SoporteApp - INFO - Se retornan 1 soportes
+2025-10-16 16:30:41 - SoporteApp - INFO - Intento de crear soporte - Cédula: 122345567889
+2025-10-16 16:30:41 - SoporteApp - INFO - No existe soporte con cédula: 122345567889
+2025-10-16 16:30:41 - SoporteApp - INFO - Soporte creado exitosamente - Cédula: 122345567889, Nombre: brayan felipe pulido lopez
+2025-10-16 16:30:41 - SoporteApp - INFO - Soporte creado exitosamente - ID: 24
+2025-10-16 16:30:41 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:30:41 - SoporteApp - INFO - Consultados 2 soportes (skip=0, limit=100)
+2025-10-16 16:30:41 - SoporteApp - INFO - Se retornan 2 soportes
+2025-10-16 16:31:39 - SoporteApp - INFO - Intento de crear soporte - Cédula: 9876543210
+2025-10-16 16:31:39 - SoporteApp - INFO - No existe soporte con cédula: 9876543210
+2025-10-16 16:31:39 - SoporteApp - INFO - Soporte creado exitosamente - Cédula: 9876543210, Nombre: marlon andres
+2025-10-16 16:31:39 - SoporteApp - INFO - Soporte creado exitosamente - ID: 25
+2025-10-16 16:31:39 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:31:39 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 16:31:39 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 16:31:49 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 16:31:49 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 16:31:49 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 17:03:31 - SoporteApp - INFO - Sistema de logging inicializado - Archivo: logs/soporte_20251016.log
+2025-10-16 17:03:32 - SoporteApp - INFO - === Iniciando aplicación de Soporte ===
+2025-10-16 17:03:32 - SoporteApp - INFO - Base de datos MySQL inicializada correctamente
+2025-10-16 17:50:04 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 17:50:04 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 17:50:04 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 17:59:48 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 17:59:48 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 17:59:48 - SoporteApp - INFO - Archivo Excel leído: 1 filas encontradas
+2025-10-16 17:59:48 - SoporteApp - INFO - Excel procesado exitosamente: 1 registros válidos
+2025-10-16 17:59:48 - SoporteApp - INFO - Excel procesado: 1 registros
+2025-10-16 17:59:48 - SoporteApp - INFO - Iniciando inserción masiva de 1 registros
+2025-10-16 17:59:48 - SoporteApp - INFO - Registro insertado (fila 2): 1054789632
+2025-10-16 17:59:48 - SoporteApp - INFO - Inserción masiva completada: 1 exitosos, 0 fallidos
+2025-10-16 17:59:48 - SoporteApp - INFO - Carga completada: 1 exitosos, 0 fallidos
+2025-10-16 18:00:02 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 18:00:02 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 18:00:02 - SoporteApp - INFO - Archivo Excel leído: 1 filas encontradas
+2025-10-16 18:00:02 - SoporteApp - INFO - Excel procesado exitosamente: 1 registros válidos
+2025-10-16 18:00:02 - SoporteApp - INFO - Excel procesado: 1 registros
+2025-10-16 18:00:02 - SoporteApp - INFO - Iniciando inserción masiva de 1 registros
+2025-10-16 18:00:02 - SoporteApp - WARNING - Cédula duplicada (fila 2): 1054789632
+2025-10-16 18:00:02 - SoporteApp - WARNING - No se insertó ningún registro
+2025-10-16 18:00:02 - SoporteApp - INFO - Carga completada: 0 exitosos, 1 fallidos
+2025-10-16 18:00:12 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 18:00:12 - SoporteApp - INFO - Consultados 4 soportes (skip=0, limit=100)
+2025-10-16 18:00:12 - SoporteApp - INFO - Se retornan 4 soportes
+2025-10-16 18:00:16 - SoporteApp - INFO - Intentando eliminar soporte - ID: 26
+2025-10-16 18:00:16 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 26
+2025-10-16 18:00:16 - SoporteApp - INFO - Soporte eliminado exitosamente - ID: 26
+2025-10-16 18:00:16 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 18:00:16 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 18:00:16 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 20:13:52 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 20:13:53 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 20:13:54 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 20:13:59 - SoporteApp - INFO - Acceso a endpoint raíz /
+2025-10-16 21:42:09 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 21:42:09 - SoporteApp - INFO - Consultados 3 soportes (skip=0, limit=100)
+2025-10-16 21:42:09 - SoporteApp - INFO - Se retornan 3 soportes
+2025-10-16 21:57:11 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 21:57:11 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 21:57:11 - SoporteApp - INFO - Archivo Excel leído: 1 filas encontradas
+2025-10-16 21:57:11 - SoporteApp - INFO - Excel procesado exitosamente: 1 registros válidos
+2025-10-16 21:57:11 - SoporteApp - INFO - Excel procesado: 1 registros
+2025-10-16 21:57:11 - SoporteApp - INFO - Iniciando inserción masiva de 1 registros
+2025-10-16 21:57:11 - SoporteApp - INFO - Registro insertado (fila 2): 1054789632
+2025-10-16 21:57:11 - SoporteApp - INFO - Inserción masiva completada: 1 exitosos, 0 fallidos
+2025-10-16 21:57:11 - SoporteApp - INFO - Carga completada: 1 exitosos, 0 fallidos
+2025-10-16 21:57:35 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 21:57:35 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 21:57:35 - SoporteApp - INFO - Archivo Excel leído: 1 filas encontradas
+2025-10-16 21:57:35 - SoporteApp - INFO - Excel procesado exitosamente: 1 registros válidos
+2025-10-16 21:57:35 - SoporteApp - INFO - Excel procesado: 1 registros
+2025-10-16 21:57:35 - SoporteApp - INFO - Iniciando inserción masiva de 1 registros
+2025-10-16 21:57:35 - SoporteApp - WARNING - Cédula duplicada (fila 2): 1054789632
+2025-10-16 21:57:35 - SoporteApp - WARNING - No se insertó ningún registro
+2025-10-16 21:57:35 - SoporteApp - INFO - Carga completada: 0 exitosos, 1 fallidos
+2025-10-16 21:57:44 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 21:57:44 - SoporteApp - INFO - Consultados 4 soportes (skip=0, limit=100)
+2025-10-16 21:57:44 - SoporteApp - INFO - Se retornan 4 soportes
+2025-10-16 22:06:09 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 22:06:09 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 22:06:09 - SoporteApp - INFO - Archivo Excel leído: 9 filas encontradas
+2025-10-16 22:06:09 - SoporteApp - INFO - Excel procesado exitosamente: 9 registros válidos
+2025-10-16 22:06:09 - SoporteApp - INFO - Excel procesado: 9 registros
+2025-10-16 22:06:09 - SoporteApp - INFO - Iniciando inserción masiva de 9 registros
+2025-10-16 22:06:09 - SoporteApp - WARNING - Cédula duplicada (fila 2): 1054789632
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 3): 1421365843
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 4): 123456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 5): 133456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 6): 143456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 7): 153456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 8): 163456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 9): 173456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Registro insertado (fila 10): 183456789
+2025-10-16 22:06:09 - SoporteApp - INFO - Inserción masiva completada: 8 exitosos, 1 fallidos
+2025-10-16 22:06:09 - SoporteApp - INFO - Carga completada: 8 exitosos, 1 fallidos
+2025-10-16 22:06:42 - SoporteApp - INFO - Iniciando carga de archivo Excel: prueba.xlsx
+2025-10-16 22:06:42 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 22:06:42 - SoporteApp - INFO - Archivo Excel leído: 9 filas encontradas
+2025-10-16 22:06:42 - SoporteApp - INFO - Excel procesado exitosamente: 9 registros válidos
+2025-10-16 22:06:42 - SoporteApp - INFO - Excel procesado: 9 registros
+2025-10-16 22:06:42 - SoporteApp - INFO - Iniciando inserción masiva de 9 registros
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 2): 1054789632
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 3): 1421365843
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 4): 123456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 5): 133456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 6): 143456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 7): 153456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 8): 163456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 9): 173456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - Cédula duplicada (fila 10): 183456789
+2025-10-16 22:06:42 - SoporteApp - WARNING - No se insertó ningún registro
+2025-10-16 22:06:42 - SoporteApp - INFO - Carga completada: 0 exitosos, 9 fallidos
+2025-10-16 22:06:56 - SoporteApp - INFO - Iniciando carga de archivo Excel: Rotulo wool.xlsx
+2025-10-16 22:06:56 - SoporteApp - INFO - Iniciando procesamiento de archivo Excel
+2025-10-16 22:06:56 - SoporteApp - INFO - Archivo Excel leído: 39 filas encontradas
+2025-10-16 22:06:56 - SoporteApp - ERROR - Error al procesar archivo Excel: Columnas faltantes: direccion, cedula
+2025-10-16 22:06:56 - SoporteApp - ERROR - Error de validación en archivo Excel: Error al procesar archivo Excel: Columnas faltantes: direccion, cedula
+2025-10-16 22:07:03 - SoporteApp - INFO - Consultando lista de soportes (skip=0, limit=100)
+2025-10-16 22:07:03 - SoporteApp - INFO - Consultados 12 soportes (skip=0, limit=100)
+2025-10-16 22:07:03 - SoporteApp - INFO - Se retornan 12 soportes

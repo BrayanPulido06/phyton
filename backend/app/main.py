@@ -21,7 +21,7 @@ from logs import log_info, log_error, log_warning
 
 # Crear instancia de FastAPI
 app = FastAPI(
-    title="API de Soporte de Mensajería",
+    title="API de Soporte de Personas",
     version="1.0.0",
     description="API para gestionar solicitudes de soporte con FastAPI y MySQL"
 )
