@@ -1,0 +1,124 @@
+<div class="container">
+  <header>
+    <h1>📋 Sistema de Soporte de Personas</h1>
+    <p>Registro y gestión de solicitudes de soporte</p>
+    <nav class="nav-links">
+      <a routerLink="/upload-excel" class="btn btn-secondary">📁 Carga Masiva Excel</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Formulario de registro -->
+    <section class="form-section">
+      <h2>Nuevo Soporte</h2>
+      <form (ngSubmit)="crearSoporte()" #soporteForm="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre Completo:</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            [(ngModel)]="nuevoSoporte.nombre"
+            required 
+            placeholder="Ingrese el nombre completo"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="cedula">Cédula:</label>
+          <input 
+            type="text" 
+            id="cedula" 
+            name="cedula" 
+            [(ngModel)]="nuevoSoporte.cedula"
+            required 
+            placeholder="Ingrese la cédula"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="direccion">Dirección:</label>
+          <textarea 
+            id="direccion" 
+            name="direccion" 
+            [(ngModel)]="nuevoSoporte.direccion"
+            required 
+            placeholder="Ingrese la dirección completa" 
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!soporteForm.form.valid">
+          Registrar Soporte
+        </button>
+      </form>
+    </section>
+
+    <!-- Mensajes de alerta -->
+    <div id="alertContainer">
+      <div 
+        *ngFor="let alerta of alertas" 
+        class="alert alert-{{ alerta.tipo }}"
+      >
+        {{ alerta.mensaje }}
+      </div>
+    </div>
+
+    <!-- Tabla de soportes -->
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Soportes Registrados</h2>
+        <button (click)="cargarSoportes()" class="btn btn-secondary">
+          🔄 Actualizar
+        </button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Cédula</th>
+              <th>Dirección</th>
+              <th>Fecha de Registro</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Estado de carga -->
+            <tr *ngIf="cargando">
+              <td colspan="6" class="loading">Cargando datos...</td>
+            </tr>
+
+            <!-- Sin datos -->
+            <tr *ngIf="!cargando && soportes.length === 0">
+              <td colspan="6" class="empty-state">No hay soportes registrados</td>
+            </tr>
+
+            <!-- Lista de soportes -->
+            <tr *ngFor="let soporte of soportes">
+              <td>{{ soporte.id }}</td>
+              <td>{{ soporte.nombre }}</td>
+              <td>{{ soporte.cedula }}</td>
+              <td>{{ soporte.direccion }}</td>
+              <td>{{ formatearFecha(soporte.fecha_creacion!) }}</td>
+              <td>
+                <button 
+                  class="btn btn-danger" 
+                  (click)="eliminarSoporte(soporte.id!)"
+                >
+                  🗑️ Eliminar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Soporte 2025</p>
+  </footer>
+</div>

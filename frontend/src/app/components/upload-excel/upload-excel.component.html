@@ -1,0 +1,165 @@
+<div class="container">
+  <header>
+    <h1>📁 Carga Masiva de Soportes</h1>
+    <p>Importa datos desde archivos Excel</p>
+    <nav class="nav-links">
+      <a routerLink="/" class="btn btn-secondary">← Volver al Inicio</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Instrucciones -->
+    <section class="info-section">
+      <h2>📋 Instrucciones</h2>
+      <div class="info-card">
+        <h3>Formato del archivo Excel:</h3>
+        <ul>
+          <li>El archivo debe tener las siguientes columnas: <strong>nombre</strong>, <strong>cedula</strong>, <strong>direccion</strong></li>
+          <li>Máximo 100 registros por carga</li>
+          <li>Formatos aceptados: .xlsx, .xls</li>
+          <li>No debe haber filas vacías o datos incompletos</li>
+        </ul>
+        
+        <h3>Ejemplo de estructura:</h3>
+        <table class="example-table">
+          <thead>
+            <tr>
+              <th>nombre</th>
+              <th>cedula</th>
+              <th>direccion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>1234567890</td>
+              <td>Calle 123 #45-67</td>
+            </tr>
+            <tr>
+              <td>María García</td>
+              <td>9876543210</td>
+              <td>Carrera 45 #12-34</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mensajes de alerta -->
+    <div id="alertContainer">
+      <div 
+        *ngFor="let alerta of alertas" 
+        class="alert alert-{{ alerta.tipo }}"
+      >
+        {{ alerta.mensaje }}
+      </div>
+    </div>
+
+    <!-- Formulario de carga -->
+    <section class="form-section upload-section">
+      <h2>Cargar Archivo Excel</h2>
+      <form (ngSubmit)="cargarExcel()">
+        <div class="form-group">
+          <label for="excelFile">Seleccionar archivo Excel:</label>
+          <div class="file-input-wrapper">
+            <input 
+              type="file" 
+              id="excelFile" 
+              name="file" 
+              accept=".xlsx,.xls" 
+              (change)="onFileSelected($event)"
+              required
+            >
+            <span 
+              class="file-name" 
+              [style.color]="archivoSeleccionado ? '#2ecc71' : '#7f8c8d'"
+            >
+              {{ nombreArchivo }}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="limite">Límite de registros a cargar (0-100):</label>
+          <input 
+            type="number" 
+            id="limite" 
+            name="limite" 
+            [(ngModel)]="limite"
+            min="0" 
+            max="100" 
+            required
+          >
+          <small>Deja en 100 para cargar todos los registros disponibles</small>
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn btn-primary" 
+          [disabled]="cargando"
+        >
+          {{ cargando ? '⏳ Procesando...' : '📤 Cargar Archivo' }}
+        </button>
+      </form>
+
+      <!-- Barra de progreso -->
+      <div 
+        id="progressContainer" 
+        class="progress-container" 
+        *ngIf="mostrarProgreso"
+      >
+        <div class="progress-bar">
+          <div 
+            class="progress-fill" 
+            [style.width.%]="porcentajeProgreso"
+          ></div>
+        </div>
+        <p class="progress-text">{{ textoProgreso }}</p>
+      </div>
+    </section>
+
+    <!-- Resultados de la carga -->
+    <section 
+      class="results-section" 
+      id="resultsSection" 
+      *ngIf="mostrarResultados"
+    >
+      <h2>Resultados de la Carga</h2>
+      
+      <div class="stats-cards">
+        <div class="stat-card success-card">
+          <h3>✅ Exitosos</h3>
+          <p class="stat-number">{{ exitosos }}</p>
+        </div>
+        
+        <div class="stat-card error-card">
+          <h3>❌ Fallidos</h3>
+          <p class="stat-number">{{ fallidos }}</p>
+        </div>
+        
+        <div class="stat-card info-card">
+          <h3>📊 Total Procesados</h3>
+          <p class="stat-number">{{ totalProcesados }}</p>
+        </div>
+      </div>
+
+      <!-- Lista de errores -->
+      <div *ngIf="errores.length > 0">
+        <h3>Errores Encontrados:</h3>
+        <div class="errores-list">
+          <div 
+            *ngFor="let error of errores" 
+            class="error-item"
+          >
+            <strong>Fila {{ error.fila }}</strong> - Cédula: {{ error.cedula }}
+            <br><span>{{ error.error }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Soporte 2025</p>
+  </footer>
+</div>

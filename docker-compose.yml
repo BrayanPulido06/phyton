@@ -30,7 +30,7 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      db:
+      soporte_db:  # ← CORREGIDO: era "db", debe ser "soporte_db"
         condition: service_healthy
     networks:
       - soporte_network
@@ -38,16 +38,16 @@ services:
       - ./backend/app:/app
     restart: always
 
-  # Servicio Frontend
+  # Servicio Frontend Angular con Nginx
   soporte_frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: soporte_frontend
     ports:
-      - "89:80"
+      - "89:80"  # Puerto 89 en tu máquina, puerto 80 en el contenedor
     depends_on:
-      - backend
+      - soporte_backend  # ← CORREGIDO: era "backend", debe ser "soporte_backend"
     networks:
       - soporte_network
     restart: always
