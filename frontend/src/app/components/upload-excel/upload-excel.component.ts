@@ -30,7 +30,7 @@ interface RespuestaCarga {
   styleUrl: './upload-excel.component.css'
 })
 export class UploadExcelComponent {
-  private API_URL = 'http://localhost:8000/api';
+  private API_URL = '/api';
   
   // Variables del formulario
   archivoSeleccionado: File | null = null;
@@ -171,14 +171,14 @@ export class UploadExcelComponent {
         // Mostrar alertas según resultado
         if (response.resultado.exitosos > 0) {
           this.mostrarAlerta(
-            `✅ Carga completada: ${response.resultado.exitosos} registros insertados correctamente`,
+            ` Carga completada: ${response.resultado.exitosos} registros insertados correctamente`,
             'success'
           );
         }
 
         if (response.resultado.fallidos > 0) {
           this.mostrarAlerta(
-            `⚠️ ${response.resultado.fallidos} registros no pudieron ser insertados`,
+            ` ${response.resultado.fallidos} registros no pudieron ser insertados`,
             'warning'
           );
         }

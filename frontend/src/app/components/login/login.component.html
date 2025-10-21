@@ -1,0 +1,97 @@
+<div class="login-container">
+  <div class="login-card">
+    <!-- Logo/Icono -->
+    <div class="login-header">
+      <div class="login-icon">🔐</div>
+      <h1>Iniciar Sesión</h1>
+      <p>Accede a tu cuenta para gestionar tus soportes</p>
+    </div>
+
+    <!-- Mensaje de error -->
+    <div class="alert alert-error" *ngIf="errorMensaje">
+      ⚠️ {{ errorMensaje }}
+    </div>
+
+    <!-- Formulario de login -->
+    <form (ngSubmit)="login()" class="login-form">
+      <!-- Campo de usuario -->
+      <div class="form-group">
+        <label for="username">
+          <span class="label-icon">👤</span>
+          Usuario
+        </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="loginData.username"
+          (input)="limpiarError()"
+          placeholder="Ingrese su usuario"
+          [disabled]="cargando"
+          required
+          autocomplete="username"
+        >
+      </div>
+
+      <!-- Campo de contraseña -->
+      <div class="form-group">
+        <label for="password">
+          <span class="label-icon">🔒</span>
+          Contraseña
+        </label>
+        <div class="password-input-wrapper">
+          <input
+            [type]="mostrarPassword ? 'text' : 'password'"
+            id="password"
+            name="password"
+            [(ngModel)]="loginData.password"
+            (input)="limpiarError()"
+            placeholder="Ingrese su contraseña"
+            [disabled]="cargando"
+            required
+            autocomplete="current-password"
+          >
+          <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePasswordVisibility()"
+            [disabled]="cargando"
+          >
+            {{ mostrarPassword ? '👁️' : '👁️‍🗨️' }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Botón de envío -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        [disabled]="cargando"
+      >
+        <span *ngIf="!cargando">🚀 Iniciar Sesión</span>
+        <span *ngIf="cargando">⏳ Iniciando sesión...</span>
+      </button>
+    </form>
+
+    <!-- Enlaces adicionales -->
+    <div class="login-footer">
+      <a routerLink="/" class="link-secondary">
+        ← Volver al inicio
+      </a>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="login-info">
+      <p>
+        <strong>Nota:</strong> Si no tienes una cuenta, contacta al administrador del sistema.
+      </p>
+    </div>
+  </div>
+
+  <!-- Decoración de fondo -->
+  <div class="background-decoration">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+</div>
