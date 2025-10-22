@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router'; // ← AGREGAR ESTA LÍNEA
+import { RouterLink } from '@angular/router';
 import { SoporteService, Soporte } from '../../services/soporte.service';
 
 @Component({
   selector: 'app-soporte-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink], // ← AGREGAR RouterLink AQUÍ
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './soporte-list.component.html',
   styleUrl: './soporte-list.component.css'
 })
 export class SoporteListComponent implements OnInit {
-  // ... resto del código igual
   soportes: Soporte[] = [];
   cargando = false;
   alertas: { mensaje: string; tipo: 'success' | 'error' | 'warning' }[] = [];
 
-  // Modelo para el formulario
   nuevoSoporte: Soporte = {
     nombre: '',
     cedula: '',
@@ -30,9 +28,6 @@ export class SoporteListComponent implements OnInit {
     this.cargarSoportes();
   }
 
-  /**
-   * Cargar todos los soportes desde la API
-   */
   cargarSoportes(): void {
     this.cargando = true;
     
@@ -50,83 +45,42 @@ export class SoporteListComponent implements OnInit {
     });
   }
 
-  /**
-   * Crear un nuevo soporte
-   */
   crearSoporte(): void {
-    // Validaciones básicas
-    if (!this.nuevoSoporte.nombre || !this.nuevoSoporte.cedula || !this.nuevoSoporte.direccion) {
-      this.mostrarAlerta('Por favor complete todos los campos', 'warning');
-      return;
-    }
-
-    if (this.nuevoSoporte.nombre.length < 3) {
-      this.mostrarAlerta('El nombre debe tener al menos 3 caracteres', 'warning');
-      return;
-    }
-
-    if (this.nuevoSoporte.cedula.length < 5) {
-      this.mostrarAlerta('La cédula debe tener al menos 5 caracteres', 'warning');
-      return;
-    }
-
-    if (this.nuevoSoporte.direccion.length < 5) {
-      this.mostrarAlerta('La dirección debe tener al menos 5 caracteres', 'warning');
-      return;
-    }
-
-    this.soporteService.crearSoporte(this.nuevoSoporte).subscribe({
-      next: (response: Soporte) => {
-        this.mostrarAlerta('Soporte registrado exitosamente', 'success');
-        this.limpiarFormulario();
-        this.cargarSoportes();
-      },
+    if (this.nuevoSoporte.nombre && this.nuevoSoporte.cedula && this.nuevoSoporte.direccion) {
+      this.soporteService.crearSoporte(this.nuevoSoporte).subscribe({
+        next: (soporte: Soporte) => {
+          this.soportes.push(soporte);
+          this.limpiarFormulario();
+          this.mostrarAlerta('Soporte creado con éxito', 'success');
+        },
       error: (error: Error) => {
-        console.error('Error al crear soporte:', error);
-        this.mostrarAlerta(error.message, 'error');
-      }
-    });
+          console.error('Error al crear soporte:', error);
+          this.mostrarAlerta('Error al crear el soporte', 'error');
+        }
+      });
+    } else {
+      this.mostrarAlerta('Por favor, complete todos los campos', 'warning');
+    }
   }
 
-  /**
-   * Eliminar un soporte
-   */
   eliminarSoporte(id: number): void {
-    if (!confirm('¿Está seguro de que desea eliminar este soporte?')) {
-      return;
-    }
-
     this.soporteService.eliminarSoporte(id).subscribe({
-      next: (response: any) => {
-        this.mostrarAlerta('Soporte eliminado exitosamente', 'success');
-        this.cargarSoportes();
+      next: () => {
+        this.soportes = this.soportes.filter(s => s.id !== id);
+        this.mostrarAlerta('Soporte eliminado con éxito', 'success');
       },
       error: (error: Error) => {
         console.error('Error al eliminar soporte:', error);
-        this.mostrarAlerta(error.message, 'error');
+        this.mostrarAlerta('Error al eliminar el soporte', 'error');
       }
     });
   }
 
-  /**
-   * Mostrar alerta temporal
-   */
   mostrarAlerta(mensaje: string, tipo: 'success' | 'error' | 'warning'): void {
-    const alerta = { mensaje, tipo };
-    this.alertas.push(alerta);
-
-    // Eliminar la alerta después de 5 segundos
-    setTimeout(() => {
-      const index = this.alertas.indexOf(alerta);
-      if (index > -1) {
-        this.alertas.splice(index, 1);
-      }
-    }, 5000);
+    this.alertas.push({ mensaje, tipo });
+    setTimeout(() => this.alertas.shift(), 5000);
   }
 
-  /**
-   * Limpiar el formulario
-   */
   limpiarFormulario(): void {
     this.nuevoSoporte = {
       nombre: '',
@@ -135,17 +89,55 @@ export class SoporteListComponent implements OnInit {
     };
   }
 
-  /**
-   * Formatear fecha al estilo colombiano
-   */
   formatearFecha(fechaStr: string): string {
+    if (!fechaStr) {
+      return 'Fecha no disponible';
+    }
     const fecha = new Date(fechaStr);
-    return fecha.toLocaleString('es-CO', {
+    return fecha.toLocaleDateString('es-ES', {
       year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
+      month: 'long',
+      day: 'numeric'
+    });
+  }
+
+  exportToExcel(): void {
+    this.soporteService.exportToExcel().subscribe({
+      next: (data: Blob) => {
+        const blob = new Blob([data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'soportes.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      },
+      error: (error: Error) => {
+        console.error('Error al exportar a Excel:', error);
+        this.mostrarAlerta('Error al exportar a Excel', 'error');
+      }
+    });
+  }
+
+  exportToPDF(): void {
+    this.soporteService.exportToPDF().subscribe({
+      next: (data: Blob) => {
+        const blob = new Blob([data], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'soportes.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      },
+      error: (error: Error) => {
+        console.error('Error al exportar a PDF:', error);
+        this.mostrarAlerta('Error al exportar a PDF', 'error');
+      }
     });
   }
 }

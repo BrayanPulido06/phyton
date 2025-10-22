@@ -66,55 +66,32 @@
 
     <!-- Tabla de soportes -->
     <section class="table-section">
-      <div class="table-header">
-        <h2>Soportes Registrados</h2>
-        <button (click)="cargarSoportes()" class="btn btn-secondary">
-          🔄 Actualizar
-        </button>
+      <h2>Lista de Soportes</h2>
+      <div class="mb-3">
+        <button class="btn btn-primary me-2" (click)="exportToExcel()">Exportar a Excel</button>
+        <button class="btn btn-secondary" (click)="exportToPDF()">Exportar a PDF</button>
       </div>
 
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Cédula</th>
-              <th>Dirección</th>
-              <th>Fecha de Registro</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Estado de carga -->
-            <tr *ngIf="cargando">
-              <td colspan="6" class="loading">Cargando datos...</td>
-            </tr>
-
-            <!-- Sin datos -->
-            <tr *ngIf="!cargando && soportes.length === 0">
-              <td colspan="6" class="empty-state">No hay soportes registrados</td>
-            </tr>
-
-            <!-- Lista de soportes -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Dirección</th>
+            <th>Fecha de Creación</th>
+          </tr>
+        </thead>
+        <tbody>
             <tr *ngFor="let soporte of soportes">
               <td>{{ soporte.id }}</td>
               <td>{{ soporte.nombre }}</td>
               <td>{{ soporte.cedula }}</td>
               <td>{{ soporte.direccion }}</td>
-              <td>{{ formatearFecha(soporte.fecha_creacion!) }}</td>
-              <td>
-                <button 
-                  class="btn btn-danger" 
-                  (click)="eliminarSoporte(soporte.id!)"
-                >
-                  🗑️ Eliminar
-                </button>
-              </td>
-            </tr>
+            <td>{{ soporte.fecha_creacion | date:'medium' }}</td>
+          </tr>
           </tbody>
         </table>
-      </div>
     </section>
   </main>
 

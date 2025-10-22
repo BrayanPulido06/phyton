@@ -20,17 +20,14 @@ export interface SoporteResponse {
   providedIn: 'root'
 })
 export class SoporteService {
-  // Cuando está en Docker con Nginx, usa rutas relativas
-  // IMPORTANTE: El "/" al final es necesario para FastAPI
-  private apiUrl = '/api/soportes/';
-
+  private apiUrl = 'http://localhost:8000/api'; // Asegúrate de que este puerto coincida con el de tu backend
   constructor(private http: HttpClient) {}
 
   /**
    * Obtener todos los soportes
    */
   getSoportes(): Observable<Soporte[]> {
-    return this.http.get<Soporte[]>(this.apiUrl)
+    return this.http.get<Soporte[]>(`${this.apiUrl}/soportes/`)
       .pipe(catchError(this.handleError));
   }
 
@@ -38,7 +35,7 @@ export class SoporteService {
    * Obtener un soporte por ID
    */
   getSoporteById(id: number): Observable<Soporte> {
-    return this.http.get<Soporte>(`${this.apiUrl}/${id}`)
+    return this.http.get<Soporte>(`${this.apiUrl}/soportes/${id}`)
       .pipe(catchError(this.handleError));
   }
 
@@ -46,7 +43,7 @@ export class SoporteService {
    * Crear un nuevo soporte
    */
   crearSoporte(soporte: Soporte): Observable<Soporte> {
-    return this.http.post<Soporte>(this.apiUrl, soporte)
+    return this.http.post<Soporte>(`${this.apiUrl}/soportes/`, soporte)
       .pipe(catchError(this.handleError));
   }
 
@@ -54,7 +51,23 @@ export class SoporteService {
    * Eliminar un soporte
    */
   eliminarSoporte(id: number): Observable<SoporteResponse> {
-    return this.http.delete<SoporteResponse>(`${this.apiUrl}/${id}`)
+    return this.http.delete<SoporteResponse>(`${this.apiUrl}/soportes/${id}`)
+      .pipe(catchError(this.handleError));
+  }
+
+  /**
+   * Exportar a Excel
+   */
+  exportToExcel(): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/soportes/export/excel`, { responseType: 'blob' })
+      .pipe(catchError(this.handleError));
+  }
+
+  /**
+   * Exportar a PDF
+   */
+  exportToPDF(): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/soportes/export/pdf`, { responseType: 'blob' })
       .pipe(catchError(this.handleError));
   }
 
