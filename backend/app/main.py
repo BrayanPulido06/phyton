@@ -47,7 +47,10 @@ def startup_event():
 def export_soportes_excel(db_session: Session = Depends(db.get_db)):
     try:
         soportes = crud.obtener_soportes(db_session)
-        excel_file = generate_excel([soporte.dict() for soporte in soportes])
+        soportes_dict = [soporte.__dict__ for soporte in soportes]
+        for soporte in soportes_dict:
+            soporte.pop('_sa_instance_state', None)
+        excel_file = generate_excel(soportes_dict)
         return StreamingResponse(
             io.BytesIO(excel_file.getvalue()),
             media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -61,7 +64,10 @@ def export_soportes_excel(db_session: Session = Depends(db.get_db)):
 def export_soportes_pdf(db_session: Session = Depends(db.get_db)):
     try:
         soportes = crud.obtener_soportes(db_session)
-        pdf_file = generate_pdf([soporte.dict() for soporte in soportes])
+        soportes_dict = [soporte.__dict__ for soporte in soportes]
+        for soporte in soportes_dict:
+            soporte.pop('_sa_instance_state', None)
+        pdf_file = generate_pdf(soportes_dict)
         return StreamingResponse(
             io.BytesIO(pdf_file.getvalue()),
             media_type="application/pdf",
