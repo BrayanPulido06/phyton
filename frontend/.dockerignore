@@ -1,0 +1,29 @@
+# Ignorar node_modules
+node_modules
+
+# Ignorar archivos de logs
+npm-debug.log
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+
+# Ignorar archivos de entorno local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignorar archivos de cobertura de pruebas
+coverage
+
+# Ignorar archivos de construcción
+/dist
+/build
+
+# Ignorar archivos de configuración del editor
+.vscode
+.idea
+
+# Ignorar otros archivos y carpetas que no son necesarios en el contenedor
+*.md
+*.log
